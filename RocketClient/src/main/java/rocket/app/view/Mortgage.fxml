@@ -42,7 +42,7 @@
                   <Label fx:id="lblHouseCost" text="Enter a House Cost" />
                   <Label fx:id="lblDownPayment" text="Enter a Down Payment " GridPane.rowIndex="1" />
                   <Label fx:id="lblIncome" text="Enter Yearly Income" GridPane.rowIndex="2" />
-                  <Label fx:id="lblExpenses" text="Enter Expenses" GridPane.rowIndex="3" />
+                  <Label fx:id="lblExpenses" text="Enter Monthly Expenses" GridPane.rowIndex="3" />
                   <Label fx:id="lblCreditScore" text="Enter Credit Score" GridPane.rowIndex="4" />
                   <Label fx:id="lblCmbTerms" text="Select a Term" GridPane.rowIndex="5" />
                   <Label fx:id="lblFinanicalPayment" text="Monthly Financial Payment " GridPane.rowIndex="8" />
@@ -80,10 +80,13 @@
                   <Label fx:id="lblFinancialRate1" prefHeight="62.0" prefWidth="285.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                   <Label fx:id="lblFinancialPayment1" prefHeight="67.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                   <Label fx:id="lblErrors" prefHeight="75.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                  <Button fx:id="btnTerms" mnemonicParsing="false" onAction="#btnCalculatePayment" text="Calculate Payment" GridPane.rowIndex="9">
+                  <Button fx:id="btnTerms" mnemonicParsing="false" onAction="#btnCalculatePayment" prefHeight="39.0" prefWidth="218.0" text="Calculate Payment" GridPane.rowIndex="9">
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
                   </Button>
                </children>
             </GridPane>

@@ -79,10 +79,8 @@ public class MortgageController {
 
 	@FXML
 	private void initialize() {
-		cmbTerm.getItems().add("15");
-		cmbTerm.getItems().add("30");
-		// set default cbTerm
-		cmbTerm.getSelectionModel().select("30");
+		cmbTerm.getItems().add("15 Years");
+		cmbTerm.getItems().add("30 Years");
 	}
 
 	private static NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
@@ -112,7 +110,11 @@ public class MortgageController {
 			lq.setdRate(-1);
 			lblErrors.setText("Invalid Credit Score");
 		}
-		lq.setiTerm(Integer.parseInt(cmbTerm.getSelectionModel().getSelectedItem().toString()));
+		if(cmbTerm.getValue() == "30 Years"){
+			lq.setiTerm(15);
+		}else {
+			lq.setiTerm(30);
+		}
 
 		a.setLoanRequest(lq);
 
@@ -129,13 +131,13 @@ public class MortgageController {
 		double fincRate = lRequest.getdRate();
 		double pmts = lRequest.getdPayment();
 		double PIT1 = lRequest.getiIncome() * .28;
-		double PIT2 = (lRequest.getiIncome() - lRequest.getiExpenses()) * .36;
+		double PIT2 = ((lRequest.getiIncome()*.36) - lRequest.getiExpenses());
 		double PIT;
 
 		if (PIT1 > PIT2) {
-			PIT = PIT1;
-		} else {
 			PIT = PIT2;
+		} else {
+			PIT = PIT1;
 		}
 		if (fincRate == -1) {
 			lblFinancialPayment1.setText("N/A");
