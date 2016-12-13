@@ -111,9 +111,9 @@ public class MortgageController {
 			lblErrors.setText("Invalid Credit Score");
 		}
 		if(cmbTerm.getValue() == "30 Years"){
-			lq.setiTerm(15);
-		}else {
 			lq.setiTerm(30);
+		}else {
+			lq.setiTerm(15);
 		}
 
 		a.setLoanRequest(lq);
