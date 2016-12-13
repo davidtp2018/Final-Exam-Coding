@@ -1,4 +1,3 @@
-// Thomas 
 package rocketBase;
 
 import java.util.ArrayList;
