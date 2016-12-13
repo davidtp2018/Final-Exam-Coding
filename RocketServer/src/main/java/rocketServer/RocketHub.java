@@ -1,6 +1,5 @@
 package rocketServer;
 
-
 import java.io.IOException;
 
 import exceptions.RateException;
