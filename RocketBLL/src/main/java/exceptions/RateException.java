@@ -1,3 +1,4 @@
+
 package exceptions;
 
 import rocketDomain.RateDomainModel;
